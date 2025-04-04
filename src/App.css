@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.button-app{
+  background-color: blueviolet;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  color:white;
+  font-weight: bold;
+}
+.button-coders{
+  background-color: yellow;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  color:black;
+  font-weight: bold;
+}
+
+/* .nav-link{
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+} */
