@@ -53,3 +53,19 @@ export const getProducts= ()=> {
         },3000)
     })
 }
+
+//crear una que devuelva un item
+
+export const getItem =(id)=>{
+
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            //si no buscan que sea dinamico
+            // resolve(data[0])
+
+            //dinamico
+            let product = data.find((item)=> item.id === id)
+            resolve(product)
+        },2000)
+    })
+}
