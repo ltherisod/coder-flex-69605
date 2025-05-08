@@ -2,23 +2,22 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer'
 import NavbarReactBootstrap from './components/NavbarReactBootstrap';
-// import ItemCount from './components/ItemCount';
-import FetchCountry from './components/ejemplos/FetchCountry';
-import FetchApi from './components/ejemplos/FetchApi';
 import ItemDetailContainer from './components/ItemDetailContainer';
-// import withLogging from './hoc/withLogging';
-// import MessageComponent from './components/ejemplos/MessageComponent';
-function App() {
-  console.log('App')
+import FetchApi from './components/ejemplos/FetchApi'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-  // const MensajeConLog = withLogging(MessageComponent)
+function App() {
+ 
   return (
-    <>
+    <BrowserRouter>
     <NavbarReactBootstrap/>
-    <ItemListContainer greeting='Bienvenidos a mi app!'/>
-    <ItemDetailContainer/>
-   
-    </>
+    <Routes>
+      <Route path='/' element={<ItemListContainer greeting='Bienvenidos a mi app!'/>}/>
+      <Route path='/category/:categoryId' element={<ItemListContainer greeting='Categoria: '/>}/>
+      <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+      <Route path='/fetch' element={<FetchApi/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
