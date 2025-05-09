@@ -16,6 +16,7 @@ const Input = () => {
         console.log('no es vocal')
        }
     }
+    
   return (
     <div>
         <input placeholder='complete con su nombre completo' onChange={inputHandler} type='text' name='nombre-completo'/>

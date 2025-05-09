@@ -26,7 +26,7 @@ const ItemListContainer = ({greeting}) => {
  
     return(
         <div>
-            <Input/>
+            {/* <Input/> */}
             <h1 className="text-success">{greeting}{categoryId && <span>{categoryId}</span>}</h1>
             <ItemList products={products}/>
         </div>
