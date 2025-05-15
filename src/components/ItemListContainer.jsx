@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import {getProducts} from '../mock/asyncMock'
 import ItemList from "./ItemList"
 import {useParams} from 'react-router-dom'
-import Input from "./ejemplos/Input"
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts]= useState([])
      
@@ -26,7 +25,6 @@ const ItemListContainer = ({greeting}) => {
  
     return(
         <div>
-            {/* <Input/> */}
             <h1 className="text-success">{greeting}{categoryId && <span>{categoryId}</span>}</h1>
             <ItemList products={products}/>
         </div>
