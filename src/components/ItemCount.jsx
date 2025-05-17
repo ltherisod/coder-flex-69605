@@ -1,6 +1,6 @@
 import  {useState } from 'react'
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
     const [count, setCount]=useState(1)
    
     const sumar = () => {
@@ -16,6 +16,10 @@ const ItemCount = ({stock}) => {
         }
     }
 
+    const comprar = ()=>{
+        onAdd(count)
+    }
+    
   return (
     <div>
         <div>
@@ -23,7 +27,12 @@ const ItemCount = ({stock}) => {
             <span  className='btn'>{count}</span>
             <button  className='btn btn-success' onClick={sumar}>+</button>
         </div>
-        <button  className='btn btn-primary' >Agregar al carrito</button>
+        {/* funcion a parte */}
+        <button  className='btn btn-primary' onClick={comprar}>Agregar al carrito</button>
+        {/* funcion anoonima */}
+         {/* <button  className='btn btn-primary' onClick={()=>onAdd(count)}>Agregar al carrito</button> */}
+         {/* NO HACER ASI */}
+         {/* <button  className='btn btn-primary' onClick={onAdd(count)}>Agregar al carrito</button> */}
     </div>
   )
 }
