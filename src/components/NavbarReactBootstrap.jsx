@@ -25,7 +25,9 @@ function NavbarReactBootstrap() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <NavLink to='/cart'>
         <CartWidgetReactIcons/>
+          </NavLink>
       </Container>
     </Navbar>
   );
