@@ -1,15 +1,7 @@
-const data = [
+export const data = [
+   
     {
-        id:'01',
-        name:'Random 1',
-        description:'sara saras..',
-        price:500,
-        stock:25,
-        category:'nuevos',
-        img:'../logo-shop.png'
-    },
-    {
-        id:'02',
+      
         name:'Random 2',
         description:'sara saras..',
         price:2500,
@@ -18,7 +10,7 @@ const data = [
         img:'https://picsum.photos/200'
     },
     {
-        id:'03',
+      
         name:'Random 3',
         description:'sara saras..',
         price:5500,
@@ -27,7 +19,7 @@ const data = [
         img:'https://picsum.photos/201'
     },
     {
-        id:'04',
+     
         name:'Random 4',
         description:'sara saras..',
         price:8500,

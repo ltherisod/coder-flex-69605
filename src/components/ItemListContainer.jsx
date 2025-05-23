@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import {getProducts} from '../mock/asyncMock'
+import {getProducts, data} from '../mock/asyncMock'
 import ItemList from "./ItemList"
 import {useParams} from 'react-router-dom'
 import LoaderComponent from "./LoaderComponent"
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../service/firebase"
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts]= useState([])
@@ -35,8 +35,12 @@ const ItemListContainer = ({greeting}) => {
     },[categoryId])
 
 
-
-
+//SE HACE UNA VEZ Y SE BORRAR
+// const subirData = ()=>{
+//     console.log('SUBIENDO DATA...')
+//     const collectionToAdd= collection(db, "productos")
+//     data.map((item)=> addDoc(collectionToAdd, item))
+// }
 
 
     //PROMESA
@@ -60,6 +64,8 @@ const ItemListContainer = ({greeting}) => {
  
     return(
         <>
+        
+        {/* <button onClick={subirData}>Subir data</button> */}
        { loading 
         ? <LoaderComponent/> 
             :<div>
