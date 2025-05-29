@@ -4,17 +4,25 @@ import ItemCount from './ItemCount'
 //importar el CONTEXTO que queremos utilizar
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 const ItemDetail = ({detail}) => {
   const [purchase, setPurchase]= useState(false)
 
 //Al hook en el parametro le pasamos el CONTEXTO que queremos utilizar
 const {cart, addToCart}= useContext(CartContext)
 
-
-  
   const onAdd = (cantidad) =>{
    addToCart(detail, cantidad)
    setPurchase(true)
+      Swal.fire({
+        position:'top-end',
+        icon:'success',
+        title:`Agregaste ${detail.name} al carrito`,
+        showCancelButton:false,
+        showConfirmButton:false,
+        timer:1000
+      })
   }
 
   return (
