@@ -10,7 +10,7 @@ const FetchCountry = () => {
     //     .then((data)=> console.log(data))
     //     .catch((error)=> console.log(error))
     // },[])
-     console.log(data, loading, error)
+ 
   return (
     <div>FetchCountry</div>
   )

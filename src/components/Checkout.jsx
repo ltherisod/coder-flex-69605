@@ -34,7 +34,7 @@ const {cart, cartTotal, clear}= useContext(CartContext)
                 total:cartTotal(),
                 date: serverTimestamp()
             }
-            console.log(orden)
+          
             const ventas = collection(db, "orders")
             //agregar un nuevo doc
             addDoc(ventas, orden)

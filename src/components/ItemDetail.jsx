@@ -6,11 +6,10 @@ import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 const ItemDetail = ({detail}) => {
   const [purchase, setPurchase]= useState(false)
-// const contexto = useContext(CartContext)
-// console.log(contexto.cart)
+
 //Al hook en el parametro le pasamos el CONTEXTO que queremos utilizar
 const {cart, addToCart}= useContext(CartContext)
-  console.log(cart, 'carrito')
+
 
   
   const onAdd = (cantidad) =>{
